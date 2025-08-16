@@ -63,9 +63,9 @@ function playRound(humanChoice, computerChoice){
 }
 
 function playGame(){
-    for(let i = 0; i < 5; i++){ //play 5 rounds
+    /*for(let i = 0; i < 5; i++){ //play 5 rounds
         playRound(getHumanChoice(), getComputerChoice())
-    }
+    }*/
     if (humanScore > computerScore)
         console.log('You win the game!')
     else if (humanScore < computerScore)
@@ -78,6 +78,7 @@ function playGame(){
 }
 
 playGame()
+
 
 
 
