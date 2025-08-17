@@ -1,6 +1,7 @@
 Rock Paper Scissors Game 🎮
 
-<img width="1436" height="719" alt="Screenshot 2025-08-17 at 4 18 17 PM" src="https://github.com/user-attachments/assets/18b6b2d1-3480-48fd-8548-d39176df2eaf" />
+<img width="1440" height="718" alt="Screenshot 2025-08-17 at 4 19 55 PM" src="https://github.com/user-attachments/assets/979c29f5-fa37-49cc-a105-68d082b62ac1" />
+
 <img width="1439" height="712" alt="Screenshot 2025-08-17 at 4 19 08 PM" src="https://github.com/user-attachments/assets/6ec9db6a-abe6-493a-bcb8-0b63f5799d3a" />
 
 
