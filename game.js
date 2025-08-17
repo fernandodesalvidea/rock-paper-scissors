@@ -1,5 +1,6 @@
 let humanScore = 0
 let computerScore = 0
+let winner = false;
 
 //get computer answer (random)
 function getComputerChoice() {
@@ -87,7 +88,24 @@ function playRound(humanChoice, computerChoice){
         }
     }
 
-
+    if(humanScore >= 5 ||computerScore >= 5){
+        winner = true;
+        if (humanScore > computerScore){
+            const results = document.querySelector("#results");
+            results.textContent = 'You win the game!';
+            winner = true;
+            }          
+            else if (humanScore < computerScore){
+                const results = document.querySelector("#results");
+                results.textContent = 'You lose the game :(';
+                winner = true;
+            }
+            else {
+                const results = document.querySelector("#results");
+                results.textContent = 'You tied with the computer.'
+                winner = true;
+            }
+    }
 
 }
 
@@ -96,47 +114,28 @@ const paperButton = document.querySelector("#paper");
 const scissorsButton = document.querySelector("#scissors");
 
 function playGame() {
-
-    let winner = false;
-
     //show initial scores
     const scores = document.querySelector('#scores'); 
     scores.textContent = `Your score: ${humanScore}. Computer score: ${computerScore}`;
 
-
     //add event listeners, only play if the scores are less than 5....
+        rockButton.addEventListener('click', () => {
+            if(winner == false)
+                playRound('rock', getComputerChoice())
 
-    rockButton.addEventListener('click', () => {
-        playRound('rock', getComputerChoice())
-    });
-    paperButton.addEventListener('click', () => {
-        playRound('paper', getComputerChoice())
-    });
-    scissorsButton.addEventListener('click', () => {
-        playRound('scissors', getComputerChoice())
-    });
+        });
+        paperButton.addEventListener('click', () => {
+            if(winner == false)
+                playRound('paper', getComputerChoice())
+        });
+        scissorsButton.addEventListener('click', () => {
+            if(winner == false)
+                playRound('scissors', getComputerChoice())
+        });
+                    
+            //display results
+            scores.textContent = `Your score: ${humanScore}. Computer score: ${computerScore}`;
 
-    if (humanScore >= 5 ||computerScore >= 5){
-     if (humanScore > computerScore){
-        //const results = document.querySelector("#results");
-        results.textContent = 'You win the game!';
-        winner = true;
-     }
-      
-    else if (humanScore < computerScore){
-        results.textContent = 'You lose the game :(';
-        winner = true;
-    }
-
-    else {
-        results.textContent = 'You tied with the computer.'
-        winner = true;
-    }
-        
-    //display results
-    scores.textContent = `Your score: ${humanScore}. Computer score: ${computerScore}`;
-
-    }
 
 }
 
