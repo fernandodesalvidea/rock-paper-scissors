@@ -62,10 +62,23 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
+const rockButton = document.querySelector("#rock");
+const paperButton = document.querySelector("#paper");
+const scissorsButton = document.querySelector("#scissors");
+
+//add event listeners:
+rockButton.addEventListener('click', () => {
+    playRound('rock', getComputerChoice())
+});
+paperButton.addEventListener('click', () => {
+    playRound('paper', getComputerChoice())
+});
+scissorsButton.addEventListener('click', () => {
+    playRound('scissors', getComputerChoice())
+});
+
+
 function playGame(){
-    /*for(let i = 0; i < 5; i++){ //play 5 rounds
-        playRound(getHumanChoice(), getComputerChoice())
-    }*/
     if (humanScore > computerScore)
         console.log('You win the game!')
     else if (humanScore < computerScore)
@@ -77,7 +90,8 @@ function playGame(){
     console.log(`Computer score: ${computerScore}`)  
 }
 
-playGame()
+
+//playGame()
 
 
 
