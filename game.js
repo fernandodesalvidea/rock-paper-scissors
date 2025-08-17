@@ -109,9 +109,21 @@ function playRound(humanChoice, computerChoice){
 
 }
 
+const resetScores = () => {
+    //reset scores back!
+    humanScore = 0;
+    computerScore = 0;
+    const results = document.querySelector("#results");
+    results.textContent = "Restarting Game...";
+    const scores = document.querySelector('#scores'); 
+    scores.textContent = `Your score: ${humanScore}. Computer score: ${computerScore}`;
+    winner = false;
+}
+
 const rockButton = document.querySelector("#rock");
 const paperButton = document.querySelector("#paper");
 const scissorsButton = document.querySelector("#scissors");
+const restartButton = document.querySelector("#restart");
 
 function playGame() {
     //show initial scores
@@ -132,7 +144,11 @@ function playGame() {
             if(winner == false)
                 playRound('scissors', getComputerChoice())
         });
-                    
+        restartButton.addEventListener('click', () => {
+            if(winner)
+                resetScores()
+        })
+              
         //display results
         scores.textContent = `Your score: ${humanScore}. Computer score: ${computerScore}`;
 
