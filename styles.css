@@ -1,6 +1,7 @@
 body {
     padding: 0;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container{
@@ -12,4 +13,21 @@ body {
 button {
     padding: 50px;
     margin: 0;
+    font-size: 18px;
 }
+#results {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    align-items: center;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+#scores {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 18px;
+}
+
