@@ -113,8 +113,6 @@ const resetScores = () => {
     //reset scores back!
     humanScore = 0;
     computerScore = 0;
-    const results = document.querySelector("#results");
-    results.textContent = "Restarting Game...";
     const scores = document.querySelector('#scores'); 
     scores.textContent = `Your score: ${humanScore}. Computer score: ${computerScore}`;
     winner = false;
