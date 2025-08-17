@@ -1,4 +1,7 @@
-Rock Paper Scissors Game 🎮✊✋✌️
+Rock Paper Scissors Game 🎮
+<img width="643" height="438" alt="Screenshot 2025-08-17 at 4 13 12 PM" src="https://github.com/user-attachments/assets/3dd522f2-1bc1-4637-977d-2d50351c9254" />
+
+
 
 This is a fully functional Rock Paper Scissors game built using JavaScript, HTML, and CSS. Play against the computer and see if you can beat it!
 
