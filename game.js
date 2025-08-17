@@ -87,45 +87,67 @@ function playRound(humanChoice, computerChoice){
         }
     }
 
+
+
 }
 
 const rockButton = document.querySelector("#rock");
 const paperButton = document.querySelector("#paper");
 const scissorsButton = document.querySelector("#scissors");
 
-//add event listeners:
-rockButton.addEventListener('click', () => {
-    playRound('rock', getComputerChoice())
-});
-paperButton.addEventListener('click', () => {
-    playRound('paper', getComputerChoice())
-});
-scissorsButton.addEventListener('click', () => {
-    playRound('scissors', getComputerChoice())
-});
+function playGame() {
 
+    let winner = false;
 
-function playGame(){
-
-    const scores = document.querySelector('#scores');
+    //show initial scores
+    const scores = document.querySelector('#scores'); 
     scores.textContent = `Your score: ${humanScore}. Computer score: ${computerScore}`;
-    
 
 
-    /*
-    if (humanScore > computerScore)
-        console.log('You win the game!')
-    else if (humanScore < computerScore)
-        console.log('You lose the game :(')
-    else 
-        console.log('You tied with computer.')
+    //add event listeners, only play if the scores are less than 5....
+
+    rockButton.addEventListener('click', () => {
+        playRound('rock', getComputerChoice())
+    });
+    paperButton.addEventListener('click', () => {
+        playRound('paper', getComputerChoice())
+    });
+    scissorsButton.addEventListener('click', () => {
+        playRound('scissors', getComputerChoice())
+    });
+
+    if (humanScore >= 5 ||computerScore >= 5){
+     if (humanScore > computerScore){
+        //const results = document.querySelector("#results");
+        results.textContent = 'You win the game!';
+        winner = true;
+     }
+      
+    else if (humanScore < computerScore){
+        results.textContent = 'You lose the game :(';
+        winner = true;
+    }
+
+    else {
+        results.textContent = 'You tied with the computer.'
+        winner = true;
+    }
+        
     //display results
-    console.log(`Your score: ${humanScore}`)
-    console.log(`Computer score: ${computerScore}`)  */
+    scores.textContent = `Your score: ${humanScore}. Computer score: ${computerScore}`;
+
+    }
+
 }
 
 
-playGame()
+playGame();
+
+
+
+    
+   
+
 
 
 
