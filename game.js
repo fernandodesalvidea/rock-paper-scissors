@@ -133,8 +133,8 @@ function playGame() {
                 playRound('scissors', getComputerChoice())
         });
                     
-            //display results
-            scores.textContent = `Your score: ${humanScore}. Computer score: ${computerScore}`;
+        //display results
+        scores.textContent = `Your score: ${humanScore}. Computer score: ${computerScore}`;
 
 
 }
