@@ -23,21 +23,21 @@ h1 {
 footer {
     margin: auto;
     text-align: center;
-    font-size: 15px;
-    padding: 20px;
+    font-size: 0.9rem;
+    padding: 1.2rem;
 }
 
 .container{
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 1.5rem;
     padding: 50px;
 }
 #rock, #paper, #scissors {
-    padding: 30px;
+    padding: 1.6rem;
     margin: 0;
-    font-size: 18px;
-    border-radius: 8px;
+    font-size: 1rem;
+    border-radius: 0.8rem;
     border: 1px solid #444;
 }
 .restart-container {
@@ -47,25 +47,25 @@ footer {
 #restart {
     color: red;
     padding: 15px;
-    border-radius: 8px;
-    font-size: 18px;
+    border-radius: 0.7rem;
+    font-size: 1rem;
     border: 1px solid #444;
 }
 
 #results {
     display: flex;
     flex-direction: column;
-    font-size: 20px;
+    font-size: 1rem;
     align-items: center;
-    padding: 10px;
+    padding: 1rem;
     flex-wrap: wrap;
 }
 
 #scores {
     display: flex;
     justify-content: center;
-    padding: 10px;
-    font-size: 18px;
+    padding: 1.5rem;
+    font-size: 1rem;
 }
 
 
