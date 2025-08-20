@@ -20,7 +20,7 @@ Works on mobile, tablets, or desktop!
 -Event listeners for user input
 -CSS for layout and styling
 
-🛠️ How to Play - click on the live demo link here: 
+🛠️ How to Play - click on the live demo link here: https://fernandodesalvidea.github.io/rock-paper-scissors/
 
 If you want to try it on your local network:
 1. Clone or download this repository.
